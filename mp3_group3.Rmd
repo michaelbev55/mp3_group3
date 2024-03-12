@@ -1,0 +1,29 @@
+---
+title: "Group3_MP3"
+author: "Michael Bevilacqua, Jack Kramer, Ariana Roberts"
+date: "2024-02-24"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+
+
+```{r setup, echo=FALSE, message=FALSE, warning=FALSE}
+ssl <- read_csv("ssl.csv")
+graph1 <- ssl %>% 
+  ggplot(aes(x = Strain, y = Stress)) + geom_line() + geom_point() + labs(x = "Strain", y = "Stress") + 
+  ggtitle("Stress vs. Strain") 
+print(graph1)
+
+```
+
+
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
